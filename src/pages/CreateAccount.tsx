@@ -5,7 +5,7 @@ import styles from './Animation.module.scss'
 const CreateAccount = () => {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
-  const [header, setHeader] = useState("Создание аккаунта");
+  const [header] = useState("Создание аккаунта");
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   const keyDownHandler = (event: React.KeyboardEvent<HTMLInputElement>) => {

@@ -54,8 +54,8 @@ const NewFolder = () => {
   } 
 
   return (
-    <div className='w-full h-full flex justify-center'>
-      <div className="h-full w-2/3">
+    <div className='w-full h-full flex justify-center items-center'>
+      <div className="h-full w-2/3 flex flex-col justify-center">
         <div className="flex items-center justify-between">
           <div className="flex items-center justify-center">
             <p className="font-rubic_light text-lg m-5 font-semibold">Отчетный период:</p>
