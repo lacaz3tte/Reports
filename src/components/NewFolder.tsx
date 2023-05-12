@@ -24,9 +24,6 @@ const NewFolder = () => {
   const [dateRange, setDateRange] = useState<[Date|null,Date|null]>([null, null]);
   const [startSecondDate, endDate] = dateRange;
 
-  useEffect(()=>{
-    console.log("DR: " +  dateRange)
-  },[dateRange])
 
   const [summ,setSumm] = useState<Data>({
     representative:null,
@@ -41,10 +38,6 @@ const NewFolder = () => {
   useEffect(()=>{
     setSum((summ.auto?summ.auto:0) + (summ.business_trips?summ.business_trips:0)  + (summ.other?summ.other:0) + (summ.representative?summ.representative:0))
   },[summ])
-
-  /* useEffect(()=>{
-    console.log(summ)
-  },[summ]) */
 
    const validate = () => {
     if(summ.auto!==null && summ.business_trips!==null && summ.other!==null && summ.representative!==null && (startDate!==null || (dateRange[0]!==null && dateRange[1]!==null))){
@@ -164,7 +157,7 @@ const NewFolder = () => {
           <div className="flex justify-center">
             <button disabled={validate()}
               onClick={()=>{
-                reportsContext.addReport({date:(startDate ? startDate as Date : dateRange as [Date,Date]), status:"Сохранен", compiler:"Пахомов О.В."})
+                reportsContext.addReport({date:(startDate ? startDate as Date : dateRange as [Date,Date]),totalAmount:sum, status:"Сохранен", compiler:"Пахомов О.В."})
                 history.back()
               }}
               className="m-2 hover:bg-h3 active:bg-transparent rounded-full p-2 transition-all text-h1 font-thin flex items-center justify-center active:text-h2 bg-slate-500 disabled:bg-slate-300"
@@ -173,7 +166,7 @@ const NewFolder = () => {
             </button>
             <button disabled={validate()}
               onClick={()=>{
-                reportsContext.addReport({date:(startDate ? startDate as Date : dateRange as [Date,Date]), status:"На рассмотрении", compiler:"Пахомов О.В."})
+                reportsContext.addReport({date:(startDate ? startDate as Date : dateRange as [Date,Date]),totalAmount:sum, status:"На рассмотрении", compiler:"Пахомов О.В."})
                 history.back()
               }}
               className="m-2 hover:bg-h3 active:bg-transparent rounded-full p-2 transition-all text-h1 font-thin flex items-center justify-center active:text-h2 bg-h4 disabled:bg-slate-300"

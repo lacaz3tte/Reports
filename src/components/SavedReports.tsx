@@ -11,7 +11,7 @@ const SavedReports = () => {
       {
         reportsContext.reports.map((e)=>{
           return (
-            <Report compiler={e.compiler} date={e.date} status={e.status}/>
+            <Report compiler={e.compiler} date={e.date} status={e.status} totalAmount={e.totalAmount}/>
           )
         })
       }

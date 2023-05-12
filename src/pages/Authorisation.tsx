@@ -57,14 +57,8 @@ const Authorisation = () => {
         ></input>
         <div className={styles.div }></div>
         <button
-          className={styles.create_button }
-          onClick={() => navigate("/create")}
-        >
-          Или создайте новый аккаунт
-        </button>
-        <button
           ref={buttonRef}
-          className={styles.enter_button + ' m-5 '}
+          className={styles.enter_button + ' m-10 '}
           onClick={() => clickHandle()}
         >
           Вход

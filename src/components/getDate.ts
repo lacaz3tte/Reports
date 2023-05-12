@@ -3,8 +3,6 @@ const months = ["Январь","Февраль","Март","Апрель","Ма�
 export const getDate = (value:Date|[Date,Date]) => {
   let newVal =''
 
-  console.log(value)
-
   if(value instanceof Date){
     newVal = makeString(value)
   } else {

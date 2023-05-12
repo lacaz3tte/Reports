@@ -9,7 +9,7 @@
   }
 }
 .input{
-  @apply h-10 min-h-[40px] block w-1/2 m-2 px-5 bg-transparent text-h2 placeholder:text-h2 transition-all outline-none font-rubic_light;
+  @apply h-10 min-h-[40px] block w-1/2 m-2 px-5 bg-transparent text-h2 placeholder:text-h2 transition-all outline-none font-rubic_light ;
   foo:bar;
 
   &:focus + .div{
