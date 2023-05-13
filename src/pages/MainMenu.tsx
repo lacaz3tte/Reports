@@ -5,7 +5,6 @@ import SavedReports from "../components/SavedReports"
 import FilterButton from "../components/buttons/filterButton"
 import { ReportsContext } from "../components/ReportsContext"
 import { useContext } from 'react';
-import CancelButton from "../components/buttons/cancelButton"
 import Filter from "../components/Filter"
 
 const MainMenu = () => {
@@ -20,9 +19,6 @@ const MainMenu = () => {
           <NewReport />
         </div>
         <div className="flex">
-          {
-            reportContext.filter && <CancelButton />
-          }
           <FilterButton />
         </div>
       </div>
