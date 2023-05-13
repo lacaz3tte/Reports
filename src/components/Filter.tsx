@@ -8,7 +8,7 @@ const Filter = () => {
   const [year, setYear] = useState<Date | null>(null);
 
   return (
-    <div className="w-1/3 h-full border-l-2 border-h5">
+    <div className="w-0 md:w-1/3 h-full border-l-2 border-h5">
       <div className="p-5">
         <div className="flex items-center justify-between">
           <p className="font-rubic_light text-lg m-5 font-semibold">Месяц:</p>

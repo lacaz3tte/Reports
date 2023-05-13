@@ -7,7 +7,7 @@ const SavedReports = () => {
   const reportsContext = useContext(ReportsContext)
 
   return (
-    <div className="w-2/3 h-full overflow-y-auto scrollbar-thin scrollbar-track-h1 scrollbar-thumb-h4">
+    <div className="w-full md:w-2/3 h-full overflow-y-auto scrollbar-thin scrollbar-track-h1 scrollbar-thumb-h4">
       {
         reportsContext.reports.map((e)=>{
           return (

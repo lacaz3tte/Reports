@@ -1,7 +1,7 @@
 
 const MyProfile = () => {
   return (
-    <div className="w-1/3 h-full border-l-2 border-h5">
+    <div className="w-0 md:w-1/3 h-full border-l-2 border-h5">
       <div className="p-5">
         <label className="underline font-rubic_light text-sm">ФИО:</label>
         <p className="font-rubic_light text-xl font-semibold mb-5">Пахомов Олег Владимирович</p>

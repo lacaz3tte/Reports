@@ -48,9 +48,9 @@ const NewFolder = () => {
 
   return (
     <div className='w-full h-full flex justify-center items-center'>
-      <div className="h-full w-2/3 flex flex-col justify-center">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center justify-center">
+      <div className="h-full w-full md:w-2/3 ">
+        <div className="flex items-center justify-between flex-col md:flex-row">
+          <div className="flex items-center justify-center md:mt-5 flex-col md:flex-row w-2/3 md:w-auto">
             <p className="font-rubic_light text-lg m-5 font-semibold">Отчетный период:</p>
               {
                 secondPeriod 
@@ -65,7 +65,7 @@ const NewFolder = () => {
                 />
                 :
                 <DatePicker
-                  className="text-center outline-none border-b-[1px] border-h3 font-rubic_light bg-transparent inline-block "
+                  className="text-center outline-none border-b-[1px] border-h3 font-rubic_light bg-transparent inline-block w-full"
                   selected={startDate}
                   dateFormat='dd.MMMM.yyyy'
                   onChange={(date) => setStartDate(date as Date)}
@@ -96,7 +96,7 @@ const NewFolder = () => {
             </button>
           }
         </div>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between flex-col md:flex-row">
           <p className="font-rubic_light text-lg m-5 font-semibold">Представительские расходы:</p>
           <div>
             <input 
@@ -109,7 +109,7 @@ const NewFolder = () => {
             <File />
           </div>
         </div>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between flex-col md:flex-row">
           <p className="font-rubic_light text-lg m-5 font-semibold">Командировочные расходы:</p>
           <div>
             <input 
@@ -122,7 +122,7 @@ const NewFolder = () => {
             <File />
           </div>
         </div>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between flex-col md:flex-row">
           <p className="font-rubic_light text-lg m-5 font-semibold">Расходы на автомобиль:</p>
           <div>
             <input 
@@ -135,7 +135,7 @@ const NewFolder = () => {
             <File />
           </div>
         </div>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between flex-col md:flex-row">
           <p className="font-rubic_light text-lg m-5 font-semibold">Прочие расходы:</p>
           <div>
             <input 

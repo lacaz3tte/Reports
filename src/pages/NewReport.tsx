@@ -8,7 +8,7 @@ const NewReport = () => {
       <div className="absolute top-0 left-0 right-0 border-b-2 border-h5 flex">
         <BackButton />
       </div>
-      <div className="absolute top-[64px] left-0 right-0 bottom-0 flex">
+      <div className="absolute top-[64px] left-0 right-0 bottom-0 ">
         <NewFolder />
       </div>
     </div>
